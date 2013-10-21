@@ -1,0 +1,31 @@
+<head>
+  <title><%= @title %></title>
+   <link rel="stylesheet" href="https://raw.github.com/necolas/normalize.css/master/normalize.css">
+  <style>
+         body { margin: 20px auto; width: 960px;
+                text-align: center}
+      h1 { border-bottom: 4px solid gray;
+            font-size: 64px;
+            text-align: center; }
+      h2 { font-size: 32px;
+            text-align: left}
+      li { border: 2px solid #999;
+                     height: 115px;
+                     width: 250px;
+                     padding: 20px;
+                     margin: 20px;
+                     display: inline-block;
+                     font-size: 24pt; }
+   </style>
+ </head>
+
+ <body>
+ <h1><%= @title %></h1>
+
+ <h2>New Items Available:</h2>
+
+  <ul>
+    <% @items.each do |key, value| %>
+    <li><%= key %><br /><br /> Cost: <%= value %></li>
+    <% end %>
+  </ul>
